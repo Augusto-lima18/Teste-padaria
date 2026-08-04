@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags de segurança e otimização -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Sua Padaria & Café | Tradição e Sabor</title>
+    <title>Sua Padaria & Confeitaria | Pão Quentinho e Cafés</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,11 +13,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f4f7f5',
-                            100: '#e3eae6',
-                            500: '#4d6a5d',
-                            600: '#3f574c',
-                            700: '#32453c',
+                            50: '#fffbe6',
+                            100: '#fef3c7',
+                            500: '#d97706', // Âmbar / Dourado Pão
+                            600: '#b45309',
+                            700: '#92400e',
                         }
                     }
                 }
@@ -30,10 +27,10 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-amber-50/30 text-stone-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20tirar%20uma%20dúvida." 
+    <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20ou%20encomenda." 
        target="_blank" 
        rel="noopener noreferrer"
        aria-label="Falar pelo WhatsApp"
@@ -42,10 +39,10 @@
     </a>
 
     <!-- CABEÇALHO / NAVBAR -->
-    <header class="sticky top-0 z-40 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-100">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-stone-200 border-2 border-dashed border-stone-400 rounded-lg flex items-center justify-center text-stone-500 text-xs font-semibold">
+                <div class="w-12 h-12 bg-amber-100 border-2 border-dashed border-amber-300 rounded-lg flex items-center justify-center text-amber-700 text-xs font-semibold">
                     LOGO
                 </div>
                 <span class="font-semibold text-stone-700 tracking-tight text-sm hidden sm:inline">Sua Padaria</span>
@@ -57,96 +54,153 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (TOPO) -->
+    <!-- HERO SECTION -->
     <section class="relative py-16 md:py-24 px-4 max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
         <div class="md:w-1/2 space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 border border-brand-500/20 text-brand-700 text-xs font-semibold tracking-wide uppercase">
-                <i data-lucide="coffee" class="w-4 h-4"></i> Seu café da manhã perfeito é aqui
+                <i data-lucide="coffee" class="w-4 h-4"></i> Pão quentinho a toda hora
             </div>
             <h1 class="text-4xl md:text-5xl font-serif font-bold text-stone-900 tracking-tight leading-tight">
-                Pães artesanais, cafés especiais e <span class="text-brand-500">momentos inesquecíveis.</span>
+                O sabor do café da manhã artesanal <span class="text-brand-500">todos os dias.</span>
             </h1>
             <p class="text-stone-600 text-base md:text-lg leading-relaxed">
-                Tudo feito com carinho todos os dias para trazer o verdadeiro sabor da tradição para a sua mesa.
+                Pães de fermentação natural, cafés especiais, salgados assados e balcão completo para o seu dia começar melhor.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                <a href="#cardapio" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-xl text-center shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="book-open"></i> Ver Cardápio
-                </a>
-                <a href="#sobre" class="bg-stone-200 hover:bg-stone-300 text-stone-800 font-semibold px-6 py-3.5 rounded-xl text-center transition-all">
-                    Nossa História
+                <a href="#produtos" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3.5 rounded-xl text-center shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="utensils"></i> Ver Nossos Produtos
                 </a>
             </div>
         </div>
 
         <div class="md:w-1/2 w-full">
-            <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-xl border border-stone-200 bg-white p-2">
+            <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-xl border border-amber-100 bg-white p-2">
                 <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" 
-                     alt="Pães e Café Artesanal" 
+                     alt="Pães Artesanais" 
                      loading="lazy"
                      class="rounded-xl object-cover w-full h-72 md:h-96">
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO CARDÁPIO -->
-    <section id="cardapio" class="py-16 md:py-20 bg-stone-100 border-y border-stone-200 px-4">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-            <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-full flex items-center justify-center mx-auto">
-                <i data-lucide="utensils" class="w-6 h-6"></i>
+    <!-- SEÇÃO PRODUTOS / CATEGORIAS (ESTILO BOTÃO VISUAL) -->
+    <section id="produtos" class="py-16 md:py-20 bg-white border-t border-amber-100 px-4">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <div class="text-center space-y-3 max-w-xl mx-auto">
+                <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-full flex items-center justify-center mx-auto">
+                    <i data-lucide="croissant" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-serif font-bold text-stone-900">Nossa Vitrine</h2>
+                <p class="text-stone-600 text-sm md:text-base">
+                    Clique na categoria para conferir nossas opções ou encomendar via WhatsApp.
+                </p>
             </div>
-            <h2 class="text-3xl font-serif font-bold text-stone-900">Nosso Cardápio</h2>
-            <p class="text-stone-600 max-w-xl mx-auto">
-                Confira nossas opções de pães frescos, cafés passados na hora, salgados artesanais e doces especiais.
-            </p>
-            <div class="pt-2">
-                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20completo." 
+
+            <!-- GRADE DE CARTÕES COM IMAGEM DE FUNDO -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                
+                <!-- CARD 1: PÃES -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20saber%20as%20opções%20de%20PÃES." 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all shadow-md">
-                    <i data-lucide="file-text" class="w-5 h-5"></i>
-                    Acessar Cardápio Completo
+                   class="group relative h-80 rounded-3xl overflow-hidden shadow-md border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&q=80" 
+                         alt="Pães Artesanais" 
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-2xl font-black text-white tracking-wider uppercase">PÃES</h3>
+                        <span class="inline-block bg-stone-100/90 hover:bg-white text-stone-900 text-xs font-bold px-4 py-2 rounded-xl shadow-sm transition-all">
+                            Saiba mais
+                        </span>
+                    </div>
                 </a>
+
+                <!-- CARD 2: CAFÉS & BEBIDAS -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20CAFÉS." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="group relative h-80 rounded-3xl overflow-hidden shadow-md border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" 
+                         alt="Cafés Especiais" 
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-2xl font-black text-white tracking-wider uppercase">CAFÉS</h3>
+                        <span class="inline-block bg-stone-100/90 hover:bg-white text-stone-900 text-xs font-bold px-4 py-2 rounded-xl shadow-sm transition-all">
+                            Saiba mais
+                        </span>
+                    </div>
+                </a>
+
+                <!-- CARD 3: SALGADOS -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20SALGADOS." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="group relative h-80 rounded-3xl overflow-hidden shadow-md border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80" 
+                         alt="Salgados de Estufa" 
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-2xl font-black text-white tracking-wider uppercase">SALGADOS</h3>
+                        <span class="inline-block bg-stone-100/90 hover:bg-white text-stone-900 text-xs font-bold px-4 py-2 rounded-xl shadow-sm transition-all">
+                            Saiba mais
+                        </span>
+                    </div>
+                </a>
+
+                <!-- CARD 4: DOCES & CONFEITARIA -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20DOCES." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="group relative h-80 rounded-3xl overflow-hidden shadow-md border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" 
+                         alt="Doces de Padaria" 
+                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-2xl font-black text-white tracking-wider uppercase">DOCES</h3>
+                        <span class="inline-block bg-stone-100/90 hover:bg-white text-stone-900 text-xs font-bold px-4 py-2 rounded-xl shadow-sm transition-all">
+                            Saiba mais
+                        </span>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE -->
-    <section id="sobre" class="py-16 md:py-20 px-4 max-w-4xl mx-auto text-center">
-        <div class="space-y-6">
+    <!-- SEÇÃO NOSSA HISTÓRIA (REPOSICIONADA EMBAIXO DE NOSSA VITRINE) -->
+    <section id="historia" class="py-16 bg-amber-100/40 border-t border-amber-100 px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
             <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-full flex items-center justify-center mx-auto">
-                <i data-lucide="heart" class="w-6 h-6"></i>
+                <i data-lucide="book-open" class="w-6 h-6"></i>
             </div>
-            <h2 class="text-3xl font-serif font-bold text-stone-900">Nossa História</h2>
-            <p class="text-stone-600 max-w-xl mx-auto">
-                Conheça a trajetória, os valores e o amor pela panificação que tornam a nossa casa um ponto de encontro especial.
-            </p>
-            <div class="pt-2">
-                <a href="https://wa.me/5519999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20história%20da%20padaria." 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 bg-stone-200 hover:bg-stone-300 text-stone-800 font-semibold px-8 py-3.5 rounded-xl transition-all">
+            <h2 class="text-3xl font-serif font-bold text-stone-900">Conheça Nossa História</h2>
+            <div>
+                <a href="historia.html" class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-semibold px-8 py-3.5 rounded-xl shadow-md transition-all">
+                    <span>Saiba mais sobre nós</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    Conhecer Mais
                 </a>
             </div>
         </div>
     </section>
 
     <!-- LOCALIZAÇÃO E HORÁRIOS -->
-    <section id="contato" class="py-16 px-4 bg-brand-500 text-white">
+    <section id="contato" class="py-16 px-4 bg-brand-600 text-white">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div class="space-y-4 text-center md:text-left">
-                <h2 class="text-3xl font-serif font-bold">Venha nos visitar!</h2>
-                <p class="text-brand-100 text-sm leading-relaxed">
-                    Aberto todos os dias para deixar o seu dia mais gostoso.
+                <h2 class="text-3xl font-serif font-bold">Venha tomar um café conosco!</h2>
+                <p class="text-amber-100 text-sm leading-relaxed">
+                    Sinta o aroma do pão saindo do forno e aproveite nosso espaço aconchegante.
                 </p>
                 <div class="space-y-3 pt-2">
-                    <div class="flex items-center justify-center md:justify-start gap-3 text-brand-100">
+                    <div class="flex items-center justify-center md:justify-start gap-3 text-amber-100">
                         <i data-lucide="map-pin" class="w-5 h-5 text-white"></i>
                         <span>Campinas - SP</span>
                     </div>
-                    <div class="flex items-center justify-center md:justify-start gap-3 text-brand-100">
+                    <div class="flex items-center justify-center md:justify-start gap-3 text-amber-100">
                         <i data-lucide="clock" class="w-5 h-5 text-white"></i>
                         <span>Segunda a Domingo: 06h às 20h</span>
                     </div>
@@ -154,12 +208,12 @@
             </div>
 
             <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center space-y-4">
-                <h3 class="font-semibold text-lg">Dúvidas ou Encomendas?</h3>
-                <p class="text-sm text-brand-100">Entre em contato direto com a nossa equipe no balcão.</p>
+                <h3 class="font-semibold text-lg">Encomendas de Encomendas & Cestas?</h3>
+                <p class="text-sm text-amber-100">Faça seu pedido antecipado ou encomende tábuas e cestas pelo WhatsApp.</p>
                 <a href="https://wa.me/5519999999999" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="block w-full bg-white text-brand-700 hover:bg-brand-50 font-bold py-3.5 rounded-xl transition-all shadow-md">
+                   class="block w-full bg-white text-brand-700 hover:bg-amber-50 font-bold py-3.5 rounded-xl transition-all shadow-md">
                     Chamar no WhatsApp
                 </a>
             </div>
@@ -168,7 +222,7 @@
 
     <!-- RODAPÉ -->
     <footer class="py-8 bg-stone-900 text-stone-400 text-xs text-center">
-        <p>© 2026 Padaria & Café. Todos os direitos reservados.</p>
+        <p>© 2026 Padaria & Confeitaria. Todos os direitos reservados.</p>
         <p class="mt-1">Desenvolvido por <span class="text-stone-200 font-semibold">Menterea</span></p>
     </footer>
 
