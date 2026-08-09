@@ -1,113 +1,305 @@
-<!-- SEÇÃO DE CATEGORIAS DO CARDÁPIO -->
-<section class="bg-[#F8F7F4] py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-6xl mx-auto">
-    
-    <!-- Título da Seção -->
-    <div class="text-center mb-10">
-      <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#EAE8E1] mb-3">
-        <!-- Ícone sutil de Pão/Lanche -->
-        <svg class="w-5 h-5 text-[#44635B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4.5c-4.5 0-8 1.5-8 4s3.5 4 8 4 8-1.5 8-4-3.5-4-8-4zM4 8.5v6c0 2.5 3.5 4 8 4s8-1.5 8-4v-6"></path>
-        </svg>
-      </div>
-      <h2 class="font-serif text-3xl sm:text-4xl text-[#1C2A26] font-bold tracking-tight">
-        Sabores <span class="italic text-[#C38D48] font-normal">para todos os horários</span>
-      </h2>
-    </div>
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Padaria & Confeitaria | Pão Quentinho e Cafés</title>
 
-    <!-- Grid com os 6 Cards de Categorias -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- Card 1 -->
-      <a href="#cafeteria" class="group bg-white rounded-xl p-6 border border-[#E3E0D8] shadow-sm hover:shadow-md hover:border-[#44635B] transition-all duration-300 flex flex-col justify-between text-center">
-        <div>
-          <h3 class="font-serif text-xl text-[#1C2A26] font-semibold mb-2 group-hover:text-[#44635B] transition-colors">
-            Cafeteria & Bebidas Quentes
-          </h3>
-          <p class="font-sans text-sm text-[#5C6662] mb-6">
-            Espressos, Cappuccinos & Clássicos da Manhã
-          </p>
-        </div>
-        <div class="font-sans text-xs font-semibold text-[#44635B] group-hover:translate-x-1 transition-transform inline-flex items-center justify-center gap-1">
-          Ver Opções <span>&rarr;</span>
-        </div>
-      </a>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Paleta baseada no verde-eucalipto da logo
+                        brand: {
+                            50: '#f2f6f5',
+                            100: '#e1ebe8',
+                            200: '#c5d7d2',
+                            300: '#9ebdb5',
+                            400: '#739d93',
+                            500: '#44635b', // Verde principal da logo
+                            600: '#38524b',
+                            700: '#2d423d',
+                            800: '#253733',
+                            900: '#1e2b28',
+                        },
+                        // Tom quente de contraste (Dourado/Trigo) para botões de ação
+                        accent: {
+                            500: '#c88a4a',
+                            600: '#b2773b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#f4f6f5] text-stone-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-      <!-- Card 2 -->
-      <a href="#gelados" class="group bg-white rounded-xl p-6 border border-[#E3E0D8] shadow-sm hover:shadow-md hover:border-[#44635B] transition-all duration-300 flex flex-col justify-between text-center">
-        <div>
-          <h3 class="font-serif text-xl text-[#1C2A26] font-semibold mb-2 group-hover:text-[#44635B] transition-colors">
-            Gelados & Omeletes
-          </h3>
-          <p class="font-sans text-sm text-[#5C6662] mb-6">
-            Sucos, Vitaminas & Matinais Refrescantes
-          </p>
-        </div>
-        <div class="font-sans text-xs font-semibold text-[#44635B] group-hover:translate-x-1 transition-transform inline-flex items-center justify-center gap-1">
-          Ver Opções <span>&rarr;</span>
-        </div>
-      </a>
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20ou%20encomenda." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Falar pelo WhatsApp"
+       class="fixed bottom-5 right-5 z-50 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-2 border border-emerald-400/30 text-sm font-medium">
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span>Como posso te ajudar?</span>
+    </a>
 
-      <!-- Card 3 -->
-      <a href="#paes" class="group bg-white rounded-xl p-6 border border-[#E3E0D8] shadow-sm hover:shadow-md hover:border-[#44635B] transition-all duration-300 flex flex-col justify-between text-center">
-        <div>
-          <h3 class="font-serif text-xl text-[#1C2A26] font-semibold mb-2 group-hover:text-[#44635B] transition-colors">
-            Pães & Paninis
-          </h3>
-          <p class="font-sans text-sm text-[#5C6662] mb-6">
-            Sanduíches Artesanais no Pão da Casa
-          </p>
-        </div>
-        <div class="font-sans text-xs font-semibold text-[#44635B] group-hover:translate-x-1 transition-transform inline-flex items-center justify-center gap-1">
-          Ver Opções <span>&rarr;</span>
-        </div>
-      </a>
+    <!-- CABEÇALHO / NAVBAR -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-brand-100 border border-brand-300 rounded-lg flex items-center justify-center text-brand-700 text-xs font-semibold">
+                    LOGO
+                </div>
+                <span class="font-semibold text-brand-900 tracking-tight text-sm hidden sm:inline">Sua Padaria</span>
+            </div>
 
-      <!-- Card 4 -->
-      <a href="#file-especiais" class="group bg-white rounded-xl p-6 border border-[#E3E0D8] shadow-sm hover:shadow-md hover:border-[#44635B] transition-all duration-300 flex flex-col justify-between text-center">
-        <div>
-          <h3 class="font-serif text-xl text-[#1C2A26] font-semibold mb-2 group-hover:text-[#44635B] transition-colors">
-            Filés Especiais
-          </h3>
-          <p class="font-sans text-sm text-[#5C6662] mb-6">
-            Mignon e Frango Grelhados no Pão
-          </p>
+            <a href="#contato" class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm">
+                Falar Conosco
+            </a>
         </div>
-        <div class="font-sans text-xs font-semibold text-[#44635B] group-hover:translate-x-1 transition-transform inline-flex items-center justify-center gap-1">
-          Ver Opções <span>&rarr;</span>
-        </div>
-      </a>
+    </header>
 
-      <!-- Card 5 -->
-      <a href="#hamburgueres" class="group bg-white rounded-xl p-6 border border-[#E3E0D8] shadow-sm hover:shadow-md hover:border-[#44635B] transition-all duration-300 flex flex-col justify-between text-center">
-        <div>
-          <h3 class="font-serif text-xl text-[#1C2A26] font-semibold mb-2 group-hover:text-[#44635B] transition-colors">
-            Hambúrgueres
-          </h3>
-          <p class="font-sans text-sm text-[#5C6662] mb-6">
-            Artesanais com Blend Exclusivo
-          </p>
-        </div>
-        <div class="font-sans text-xs font-semibold text-[#44635B] group-hover:translate-x-1 transition-transform inline-flex items-center justify-center gap-1">
-          Ver Opções <span>&rarr;</span>
-        </div>
-      </a>
+    <!-- HERO SECTION (Verde & Destaque Dourado/Trigo) -->
+    <section class="relative py-12 md:py-20 px-4 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+            
+            <!-- Coluna de Texto -->
+            <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 border border-brand-200 text-brand-800 text-xs font-semibold tracking-wide uppercase">
+                    <i data-lucide="coffee" class="w-4 h-4 text-brand-600"></i> Pão quentinho a toda hora
+                </div>
+                
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-900 tracking-tight leading-[1.15]">
+                    O sabor do café da manhã artesanal <span class="text-accent-500 italic font-normal">todos os dias.</span>
+                </h1>
+                
+                <p class="text-stone-600 text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0 font-light">
+                    Pães de fermentação natural, cafés especiais, salgados assados e um balcão completo preparado diariamente para o seu dia começar melhor.
+                </p>
 
-      <!-- Card 6 -->
-      <a href="#confeitaria" class="group bg-white rounded-xl p-6 border border-[#E3E0D8] shadow-sm hover:shadow-md hover:border-[#44635B] transition-all duration-300 flex flex-col justify-between text-center">
-        <div>
-          <h3 class="font-serif text-xl text-[#1C2A26] font-semibold mb-2 group-hover:text-[#44635B] transition-colors">
-            Doces & Confeitaria
-          </h3>
-          <p class="font-sans text-sm text-[#5C6662] mb-6">
-            Cannolis, Bolos e Sobremesas
-          </p>
-        </div>
-        <div class="font-sans text-xs font-semibold text-[#44635B] group-hover:translate-x-1 transition-transform inline-flex items-center justify-center gap-1">
-          Ver Opções <span>&rarr;</span>
-        </div>
-      </a>
+                <div class="flex flex-col sm:flex-row gap-4 pt-2 justify-center md:justify-start">
+                    <a href="#produtos" class="bg-brand-500 hover:bg-brand-600 text-white font-medium px-7 py-3.5 rounded-xl text-center shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="utensils" class="w-4 h-4"></i> Ver Nossos Produtos
+                    </a>
+                </div>
+            </div>
 
-    </div>
-  </div>
-</section>
+            <!-- Coluna da Foto Emoldurada -->
+            <div class="md:col-span-5">
+                <div class="relative mx-auto max-w-md rounded-2xl p-2.5 bg-white shadow-xl shadow-stone-300/40 border border-stone-200">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" 
+                         alt="Pães Artesanais" 
+                         loading="lazy"
+                         class="rounded-xl object-cover w-full h-72 sm:h-80 md:h-[400px]">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DESTAQUE 1: GELATO ARTESANAL (FULL BLEED EM TOM DE VERDE ELEGANTE) -->
+    <section class="w-full bg-brand-900 text-white border-t border-brand-800 overflow-hidden">
+        <div class="w-full flex flex-col md:flex-row items-stretch">
+            
+            <div class="w-full md:w-1/2 px-8 py-12 md:p-16 lg:p-24 flex flex-col justify-center space-y-6">
+                <span class="text-xs font-semibold tracking-[0.25em] text-brand-200 uppercase">GELATERIA & CONFEITARIA</span>
+                
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-brand-100 font-normal">
+                    Bella Idea
+                </h2>
+                
+                <p class="text-base md:text-lg font-serif italic text-brand-200">
+                    O gelato artesanal que você só encontra aqui
+                </p>
+                
+                <p class="text-brand-100/80 text-sm md:text-base leading-relaxed font-light">
+                    Receita italiana, ingredientes frescos e produção própria. Sabores que mudam ao longo do ano, do clássico ao surpreendente — sempre com o cuidado de quem entende de tempo e tradição.
+                </p>
+                
+                <div class="pt-8 border-t border-brand-800 grid grid-cols-3 gap-4">
+                    <div>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-300">SABORES</h4>
+                        <p class="text-xs text-brand-200/70 italic mt-1">16 opções deliciosas</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-300">ARTESANAL</h4>
+                        <p class="text-xs text-brand-200/70 italic mt-1">Sabor sem igual</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-300">FABRICAÇÃO</h4>
+                        <p class="text-xs text-brand-200/70 italic mt-1">Própria e diária</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 min-h-[350px] md:min-h-[500px] relative">
+                <img src="18017.jpg" 
+                     alt="Bella Idea - Gelato" 
+                     class="absolute inset-0 w-full h-full object-cover object-center">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DESTAQUE 2: PÃO ESPECIAL DE LEVAIN (FULL BLEED CLARO) -->
+    <section class="w-full bg-white border-t border-stone-200 overflow-hidden">
+        <div class="w-full flex flex-col md:flex-row-reverse items-stretch">
+            
+            <div class="w-full md:w-1/2 px-8 py-12 md:p-16 lg:p-24 flex flex-col justify-center space-y-6">
+                <span class="text-xs font-semibold tracking-[0.25em] text-brand-600 uppercase">PADARIA & FERMENTAÇÃO NATURAL</span>
+                
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-brand-900 font-normal">
+                    Pane & Tradizione
+                </h2>
+                
+                <p class="text-base md:text-lg font-serif italic text-stone-600">
+                    A verdadeira essência do pão de fermentação natural
+                </p>
+                
+                <p class="text-stone-600 text-sm md:text-base leading-relaxed font-light">
+                    Respeitamos o tempo correto da fermentação para entregar um pão com miolo leve, casca crocante e aroma marcante. Perfeito para acompanhar seus cafés da manhã ou montar tábuas especiais no final do dia.
+                </p>
+                
+                <div class="pt-8 border-t border-stone-200 grid grid-cols-3 gap-4">
+                    <div>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-700">FERMENTAÇÃO</h4>
+                        <p class="text-xs text-stone-500 italic mt-1">Processo 100% natural</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-700">TEXTURA</h4>
+                        <p class="text-xs text-stone-500 italic mt-1">Crocante por fora</p>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-700">DIGESTÃO</h4>
+                        <p class="text-xs text-stone-500 italic mt-1">Leve e saudável</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 min-h-[350px] md:min-h-[500px] relative">
+                <img src="21376.jpg" 
+                     alt="Pane & Tradizione" 
+                     class="absolute inset-0 w-full h-full object-cover object-center">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO PRODUTOS / CATEGORIAS -->
+    <section id="produtos" class="py-16 md:py-24 bg-[#f4f6f5] border-t border-stone-200 px-4">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <div class="text-center space-y-3 max-w-xl mx-auto">
+                <div class="w-10 h-10 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto">
+                    <i data-lucide="croissant" class="w-5 h-5"></i>
+                </div>
+                <h2 class="text-3xl font-serif font-bold text-brand-900">Nossa Vitrine</h2>
+                <p class="text-stone-600 text-sm md:text-base font-light">
+                    Clique na categoria para conferir nossas opções ou encomendar via WhatsApp.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20saber%20as%20opções%20de%20PÃES." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&q=80" alt="Pães Artesanais" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">PÃES</h3>
+                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20CAFÉS." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Cafés Especiais" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">CAFÉS</h3>
+                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20SALGADOS." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80" alt="Salgados de Estufa" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">SALGADOS</h3>
+                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20DOCES." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Doces de Padaria" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
+                    <div class="relative z-10 text-center space-y-2">
+                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">DOCES</h3>
+                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO NOSSA HISTÓRIA -->
+    <section id="historia" class="py-16 bg-white border-t border-stone-200 px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="w-10 h-10 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto">
+                <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <h2 class="text-3xl font-serif font-bold text-brand-900">Conheça Nossa História</h2>
+            <div>
+                <a href="historia.html" class="inline-flex items-center gap-2 bg-brand-900 hover:bg-brand-800 text-white font-medium px-7 py-3 rounded-xl shadow-md transition-all">
+                    <span>Saiba mais sobre nós</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO E HORÁRIOS -->
+    <section id="contato" class="py-16 px-4 bg-brand-500 text-white">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-4 text-center md:text-left">
+                <h2 class="text-3xl font-serif font-bold">Venha tomar um café conosco!</h2>
+                <p class="text-brand-100 text-sm leading-relaxed font-light">
+                    Sinta o aroma do pão saindo do forno e aproveite nosso espaço aconchegante.
+                </p>
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center justify-center md:justify-start gap-3 text-brand-100 text-sm">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-white"></i>
+                        <span>Campinas - SP</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-3 text-brand-100 text-sm">
+                        <i data-lucide="clock" class="w-5 h-5 text-white"></i>
+                        <span>Segunda a Domingo: 06h às 20h</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center space-y-4">
+                <h3 class="font-semibold text-lg">Encomendas & Cestas</h3>
+                <p class="text-sm text-brand-100 font-light">Faça seu pedido antecipado ou encomende tábuas e cestas pelo WhatsApp.</p>
+                <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" class="block w-full bg-white text-brand-900 hover:bg-brand-50 font-bold py-3.5 rounded-xl transition-all shadow-md">
+                    Chamar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="py-8 bg-brand-900 text-brand-300 text-xs text-center border-t border-brand-800">
+        <p>© 2026 Padaria & Confeitaria. Todos os direitos reservados.</p>
+        <p class="mt-1">Desenvolvido por <span class="text-white font-semibold">Menterea</span></p>
+    </footer>
+
+    <!-- INICIALIZAÇÃO DOS ÍCONES LUCIDE -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
