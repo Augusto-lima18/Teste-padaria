@@ -12,20 +12,18 @@
             theme: {
                 extend: {
                     colors: {
-                        // Paleta baseada no verde-eucalipto da logo
                         brand: {
                             50: '#f2f6f5',
                             100: '#e1ebe8',
                             200: '#c5d7d2',
                             300: '#9ebdb5',
                             400: '#739d93',
-                            500: '#44635b', // Verde principal da logo
+                            500: '#44635b',
                             600: '#38524b',
                             700: '#2d423d',
                             800: '#253733',
                             900: '#1e2b28',
                         },
-                        // Tom quente de contraste (Dourado/Trigo) para botões de ação
                         accent: {
                             500: '#c88a4a',
                             600: '#b2773b',
@@ -66,11 +64,10 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (Verde & Destaque Dourado/Trigo) -->
+    <!-- 1. PRIMEIRA PARTE (HERO) -->
     <section class="relative py-12 md:py-20 px-4 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
             
-            <!-- Coluna de Texto -->
             <div class="md:col-span-7 space-y-6 text-center md:text-left">
                 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 border border-brand-200 text-brand-800 text-xs font-semibold tracking-wide uppercase">
                     <i data-lucide="coffee" class="w-4 h-4 text-brand-600"></i> Pão quentinho a toda hora
@@ -85,13 +82,12 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 pt-2 justify-center md:justify-start">
-                    <a href="#produtos" class="bg-brand-500 hover:bg-brand-600 text-white font-medium px-7 py-3.5 rounded-xl text-center shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">
-                        <i data-lucide="utensils" class="w-4 h-4"></i> Ver Nossos Produtos
+                    <a href="#categorias" class="bg-brand-500 hover:bg-brand-600 text-white font-medium px-7 py-3.5 rounded-xl text-center shadow-lg shadow-brand-500/20 transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="utensils" class="w-4 h-4"></i> Ver Cardápio
                     </a>
                 </div>
             </div>
 
-            <!-- Coluna da Foto Emoldurada -->
             <div class="md:col-span-5">
                 <div class="relative mx-auto max-w-md rounded-2xl p-2.5 bg-white shadow-xl shadow-stone-300/40 border border-stone-200">
                     <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" 
@@ -104,25 +100,104 @@
         </div>
     </section>
 
-    <!-- DESTAQUE 1: GELATO ARTESANAL (FULL BLEED EM TOM DE VERDE ELEGANTE) -->
-    <section class="w-full bg-brand-900 text-white border-t border-brand-800 overflow-hidden">
+    <!-- 2. O QUE VOCÊ PEDIU (SEÇÃO DE CATEGORIAS) -->
+    <section id="categorias" class="py-16 bg-white border-t border-b border-stone-200 px-4">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <div class="text-center space-y-2 max-w-xl mx-auto">
+                <span class="text-xs font-semibold tracking-widest text-brand-600 uppercase">Nosso Cardápio</span>
+                <h2 class="text-3xl font-serif font-bold text-brand-900">Conheça nossas opções</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 1. Cafeteria -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20Cafeteria." target="_blank" class="p-6 bg-[#f4f6f5] hover:bg-brand-50 rounded-2xl border border-stone-200/80 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="coffee" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Cafeteria</h3>
+                        <p class="text-sm text-stone-600 font-light">Bebidas quentes & Cappuccinos</p>
+                    </div>
+                    <span class="mt-4 inline-flex items-center text-xs font-semibold text-brand-600 group-hover:text-brand-800 gap-1">Ver opções <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </a>
+
+                <!-- 2. Gelados & Omeletes -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20Gelados%20e%20Omeletes." target="_blank" class="p-6 bg-[#f4f6f5] hover:bg-brand-50 rounded-2xl border border-stone-200/80 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="egg" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Gelados & Omeletes</h3>
+                        <p class="text-sm text-stone-600 font-light">Sucos, Vitaminas & Matinais</p>
+                    </div>
+                    <span class="mt-4 inline-flex items-center text-xs font-semibold text-brand-600 group-hover:text-brand-800 gap-1">Ver opções <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </a>
+
+                <!-- 3. Pães & Paninis -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20Pães%20e%20Paninis." target="_blank" class="p-6 bg-[#f4f6f5] hover:bg-brand-50 rounded-2xl border border-stone-200/80 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="sandwich" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Pães & Paninis</h3>
+                        <p class="text-sm text-stone-600 font-light">Sanduíches no pão artesanal</p>
+                    </div>
+                    <span class="mt-4 inline-flex items-center text-xs font-semibold text-brand-600 group-hover:text-brand-800 gap-1">Ver opções <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </a>
+
+                <!-- 4. Filés Especiais -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20Filés%20Especiais." target="_blank" class="p-6 bg-[#f4f6f5] hover:bg-brand-50 rounded-2xl border border-stone-200/80 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="utensils-crossed" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Filés Especiais</h3>
+                        <p class="text-sm text-stone-600 font-light">Mignon e Frango grelhados no pão</p>
+                    </div>
+                    <span class="mt-4 inline-flex items-center text-xs font-semibold text-brand-600 group-hover:text-brand-800 gap-1">Ver opções <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </a>
+
+                <!-- 5. Hambúrgueres -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20Hambúrgueres." target="_blank" class="p-6 bg-[#f4f6f5] hover:bg-brand-50 rounded-2xl border border-stone-200/80 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="beef" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Hambúrgueres</h3>
+                        <p class="text-sm text-stone-600 font-light">Artesanais da casa</p>
+                    </div>
+                    <span class="mt-4 inline-flex items-center text-xs font-semibold text-brand-600 group-hover:text-brand-800 gap-1">Ver opções <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </a>
+
+                <!-- 6. Doces & Confeitaria -->
+                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20Doces%20e%20Confeitaria." target="_blank" class="p-6 bg-[#f4f6f5] hover:bg-brand-50 rounded-2xl border border-stone-200/80 transition-all group flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="cake" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-900">Doces & Confeitaria</h3>
+                        <p class="text-sm text-stone-600 font-light">Cannolis e sobremesas</p>
+                    </div>
+                    <span class="mt-4 inline-flex items-center text-xs font-semibold text-brand-600 group-hover:text-brand-800 gap-1">Ver opções <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. OS QUADROS/BLOCOS DE DESTAQUE (FULL BLEED) -->
+
+    <!-- QUADRO 1: GELATO ARTESANAL -->
+    <section class="w-full bg-brand-900 text-white overflow-hidden">
         <div class="w-full flex flex-col md:flex-row items-stretch">
-            
             <div class="w-full md:w-1/2 px-8 py-12 md:p-16 lg:p-24 flex flex-col justify-center space-y-6">
                 <span class="text-xs font-semibold tracking-[0.25em] text-brand-200 uppercase">GELATERIA & CONFEITARIA</span>
-                
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-brand-100 font-normal">
-                    Bella Idea
-                </h2>
-                
-                <p class="text-base md:text-lg font-serif italic text-brand-200">
-                    O gelato artesanal que você só encontra aqui
-                </p>
-                
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-brand-100 font-normal">Bella Idea</h2>
+                <p class="text-base md:text-lg font-serif italic text-brand-200">O gelato artesanal que você só encontra aqui</p>
                 <p class="text-brand-100/80 text-sm md:text-base leading-relaxed font-light">
                     Receita italiana, ingredientes frescos e produção própria. Sabores que mudam ao longo do ano, do clássico ao surpreendente — sempre com o cuidado de quem entende de tempo e tradição.
                 </p>
-                
                 <div class="pt-8 border-t border-brand-800 grid grid-cols-3 gap-4">
                     <div>
                         <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-300">SABORES</h4>
@@ -140,33 +215,21 @@
             </div>
 
             <div class="w-full md:w-1/2 min-h-[350px] md:min-h-[500px] relative">
-                <img src="18017.jpg" 
-                     alt="Bella Idea - Gelato" 
-                     class="absolute inset-0 w-full h-full object-cover object-center">
+                <img src="18017.jpg" alt="Bella Idea - Gelato" class="absolute inset-0 w-full h-full object-cover object-center">
             </div>
-
         </div>
     </section>
 
-    <!-- DESTAQUE 2: PÃO ESPECIAL DE LEVAIN (FULL BLEED CLARO) -->
+    <!-- QUADRO 2: PÃO ESPECIAL DE LEVAIN -->
     <section class="w-full bg-white border-t border-stone-200 overflow-hidden">
         <div class="w-full flex flex-col md:flex-row-reverse items-stretch">
-            
             <div class="w-full md:w-1/2 px-8 py-12 md:p-16 lg:p-24 flex flex-col justify-center space-y-6">
                 <span class="text-xs font-semibold tracking-[0.25em] text-brand-600 uppercase">PADARIA & FERMENTAÇÃO NATURAL</span>
-                
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-brand-900 font-normal">
-                    Pane & Tradizione
-                </h2>
-                
-                <p class="text-base md:text-lg font-serif italic text-stone-600">
-                    A verdadeira essência do pão de fermentação natural
-                </p>
-                
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-brand-900 font-normal">Pane & Tradizione</h2>
+                <p class="text-base md:text-lg font-serif italic text-stone-600">A verdadeira essência do pão de fermentação natural</p>
                 <p class="text-stone-600 text-sm md:text-base leading-relaxed font-light">
                     Respeitamos o tempo correto da fermentação para entregar um pão com miolo leve, casca crocante e aroma marcante. Perfeito para acompanhar seus cafés da manhã ou montar tábuas especiais no final do dia.
                 </p>
-                
                 <div class="pt-8 border-t border-stone-200 grid grid-cols-3 gap-4">
                     <div>
                         <h4 class="text-[10px] font-semibold uppercase tracking-widest text-brand-700">FERMENTAÇÃO</h4>
@@ -184,69 +247,13 @@
             </div>
 
             <div class="w-full md:w-1/2 min-h-[350px] md:min-h-[500px] relative">
-                <img src="21376.jpg" 
-                     alt="Pane & Tradizione" 
-                     class="absolute inset-0 w-full h-full object-cover object-center">
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SEÇÃO PRODUTOS / CATEGORIAS -->
-    <section id="produtos" class="py-16 md:py-24 bg-[#f4f6f5] border-t border-stone-200 px-4">
-        <div class="max-w-6xl mx-auto space-y-10">
-            <div class="text-center space-y-3 max-w-xl mx-auto">
-                <div class="w-10 h-10 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto">
-                    <i data-lucide="croissant" class="w-5 h-5"></i>
-                </div>
-                <h2 class="text-3xl font-serif font-bold text-brand-900">Nossa Vitrine</h2>
-                <p class="text-stone-600 text-sm md:text-base font-light">
-                    Clique na categoria para conferir nossas opções ou encomendar via WhatsApp.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20saber%20as%20opções%20de%20PÃES." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
-                    <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&q=80" alt="Pães Artesanais" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
-                    <div class="relative z-10 text-center space-y-2">
-                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">PÃES</h3>
-                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
-                    </div>
-                </a>
-
-                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20o%20cardápio%20de%20CAFÉS." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Cafés Especiais" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
-                    <div class="relative z-10 text-center space-y-2">
-                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">CAFÉS</h3>
-                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
-                    </div>
-                </a>
-
-                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20SALGADOS." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
-                    <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=600&q=80" alt="Salgados de Estufa" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
-                    <div class="relative z-10 text-center space-y-2">
-                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">SALGADOS</h3>
-                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
-                    </div>
-                </a>
-
-                <a href="https://wa.me/5519999999999?text=Olá!%20Gostaria%20de%20ver%20as%20opções%20de%20DOCES." target="_blank" rel="noopener noreferrer" class="group relative h-80 rounded-2xl overflow-hidden shadow-sm border border-stone-200 flex flex-col justify-end p-5 transition-transform duration-300 hover:-translate-y-1">
-                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Doces de Padaria" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/30 to-transparent"></div>
-                    <div class="relative z-10 text-center space-y-2">
-                        <h3 class="text-xl font-bold text-white tracking-wider uppercase">DOCES</h3>
-                        <span class="inline-block bg-white/90 hover:bg-white text-brand-900 text-xs font-semibold px-4 py-1.5 rounded-lg shadow-sm transition-all">Saiba mais</span>
-                    </div>
-                </a>
+                <img src="21376.jpg" alt="Pane & Tradizione" class="absolute inset-0 w-full h-full object-cover object-center">
             </div>
         </div>
     </section>
 
     <!-- SEÇÃO NOSSA HISTÓRIA -->
-    <section id="historia" class="py-16 bg-white border-t border-stone-200 px-4">
+    <section id="historia" class="py-16 bg-[#f4f6f5] border-t border-stone-200 px-4">
         <div class="max-w-4xl mx-auto text-center space-y-6">
             <div class="w-10 h-10 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mx-auto">
                 <i data-lucide="book-open" class="w-5 h-5"></i>
