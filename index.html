@@ -1,16 +1,3 @@
-Otávio, vendo a imagem do seu GitHub, os nomes dos arquivos estão perfeitamente corretos e na raiz do repositório (18017.jpg e 21376.jpg).
-
-Isso confirma que o problema de a imagem quebrar no navegador era mesmo os caracteres invisíveis (&nbsp;) que estavam dentro da tag <img> no HTML anterior.
-
-Para corrigir de vez:
-
-Edite o arquivo index.html no seu GitHub.
-
-Apague todo o conteúdo antigo do index.html.
-
-Cole o código limpo abaixo e salve o commit:
-
-HTML
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
@@ -47,8 +34,9 @@ HTML
        target="_blank" 
        rel="noopener noreferrer"
        aria-label="Falar pelo WhatsApp"
-       class="fixed bottom-5 right-5 z-50 bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center justify-center border border-emerald-400/30">
-        <i data-lucide="message-circle" class="w-7 h-7"></i>
+       class="fixed bottom-5 right-5 z-50 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-2 border border-emerald-400/30 text-sm font-medium">
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span>Como posso te ajudar?</span>
     </a>
 
     <!-- CABEÇALHO / NAVBAR -->
@@ -96,71 +84,95 @@ HTML
         </div>
     </section>
 
-    <!-- DESTAQUE 1: GELATO ARTESANAL - FOTO DA FOLHA -->
-    <section class="py-16 md:py-24 bg-amber-50/50 border-t border-amber-100 px-4">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16">
-            <div class="md:w-1/2 space-y-6">
-                <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">GELATERIA & CONFEITARIA</span>
-                <h2 class="text-3xl md:text-4xl font-serif italic text-amber-900 font-semibold">Bella Idea</h2>
-                <p class="text-base md:text-lg font-serif italic text-stone-600">Sabor e frescor artesanal produzidos diariamente.</p>
-                <p class="text-stone-600 text-sm md:text-base leading-relaxed">
-                    A tradição de preparar sorvetes e sobremesas únicas com ingredientes selecionados. Produção própria, textura aveludada e um cardápio pensado para oferecer momentos de puro prazer a cada colherada.
+    <!-- DESTAQUE 1: GELATO ARTESANAL (FULL BLEAD - IGUAL A REFERÊNCIA) -->
+    <section class="w-full bg-[#fbf8f3] border-t border-amber-100/60 overflow-hidden">
+        <div class="w-full flex flex-col md:flex-row items-stretch">
+            
+            <!-- Conteúdo de Texto com espaçamento amplo -->
+            <div class="w-full md:w-1/2 px-8 py-12 md:p-16 lg:p-24 flex flex-col justify-center space-y-6">
+                <span class="text-xs font-semibold tracking-[0.25em] text-amber-800/80 uppercase">GELATERIA</span>
+                
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-amber-900/90 font-normal">
+                    Bella Idea
+                </h2>
+                
+                <p class="text-base md:text-lg font-serif italic text-stone-600">
+                    O gelato artesanal que você só encontra aqui
                 </p>
-                <div class="pt-6 border-t border-amber-200/60 grid grid-cols-3 gap-4">
+                
+                <p class="text-stone-600 text-sm md:text-base leading-relaxed font-light">
+                    Receita italiana, ingredientes frescos e produção própria. Sabores que mudam ao longo do ano, do clássico ao surpreendente — sempre com o cuidado de quem entende de tempo e tradição.
+                </p>
+                
+                <div class="pt-8 border-t border-amber-900/10 grid grid-cols-3 gap-4">
                     <div>
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800">VARIEDADE</h4>
-                        <p class="text-xs text-stone-500 italic mt-1">Sabores exclusivos</p>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-amber-900/70">SABORES</h4>
+                        <p class="text-xs text-stone-500 italic mt-1">16 opções deliciosas</p>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800">ARTESANAL</h4>
-                        <p class="text-xs text-stone-500 italic mt-1">100% Produção própria</p>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-amber-900/70">ARTESANAL</h4>
+                        <p class="text-xs text-stone-500 italic mt-1">Sabor sem igual</p>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800">QUALIDADE</h4>
-                        <p class="text-xs text-stone-500 italic mt-1">Ingredientes frescos</p>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-amber-900/70">FABRICAÇÃO PRÓPRIA</h4>
+                        <p class="text-xs text-stone-500 italic mt-1">Experimente e surpreenda-se</p>
                     </div>
                 </div>
             </div>
 
-            <div class="md:w-1/2 w-full">
-                <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-200/50 bg-white">
-                    <img src="18017.jpg" alt="Bella Idea - Folheto" class="w-full h-[380px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
-                </div>
+            <!-- Imagem Colada na Borda Superior/Direita/Inferior -->
+            <div class="w-full md:w-1/2 min-h-[350px] md:min-h-[550px] relative">
+                <img src="18017.jpg" 
+                     alt="Bella Idea - Gelato" 
+                     class="absolute inset-0 w-full h-full object-cover object-center">
             </div>
+
         </div>
     </section>
 
-    <!-- DESTAQUE 2: PÃO ESPECIAL DE LEVAIN - FOTO DO QUADRO -->
-    <section class="py-16 md:py-24 bg-white border-t border-amber-100 px-4">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-16">
-            <div class="md:w-1/2 space-y-6">
-                <span class="text-xs font-bold tracking-widest text-brand-600 uppercase">PADARIA & PASTA</span>
-                <h2 class="text-3xl md:text-4xl font-serif italic text-amber-900 font-semibold">Pane & Tradizione</h2>
-                <p class="text-base md:text-lg font-serif italic text-stone-600">A verdadeira essência do pão de fermentação natural.</p>
-                <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+    <!-- DESTAQUE 2: PÃO ESPECIAL DE LEVAIN (FULL BLEED INVERTIDO) -->
+    <section class="w-full bg-white border-t border-amber-100/60 overflow-hidden">
+        <div class="w-full flex flex-col md:flex-row-reverse items-stretch">
+            
+            <!-- Conteúdo de Texto -->
+            <div class="w-full md:w-1/2 px-8 py-12 md:p-16 lg:p-24 flex flex-col justify-center space-y-6">
+                <span class="text-xs font-semibold tracking-[0.25em] text-amber-800/80 uppercase">PADARIA & PASTA</span>
+                
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif italic text-amber-900/90 font-normal">
+                    Pane & Tradizione
+                </h2>
+                
+                <p class="text-base md:text-lg font-serif italic text-stone-600">
+                    A verdadeira essência do pão de fermentação natural
+                </p>
+                
+                <p class="text-stone-600 text-sm md:text-base leading-relaxed font-light">
                     Respeitamos o tempo correto da fermentação para entregar um pão com miolo leve, casca crocante e aroma marcante. Perfeito para acompanhar seus cafés da manhã ou montar tábuas especiais no final do dia.
                 </p>
-                <div class="pt-6 border-t border-amber-200/60 grid grid-cols-3 gap-4">
+                
+                <div class="pt-8 border-t border-amber-900/10 grid grid-cols-3 gap-4">
                     <div>
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800">FERMENTAÇÃO</h4>
-                        <p class="text-xs text-stone-500 italic mt-1">Processo natural</p>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-amber-900/70">FERMENTAÇÃO</h4>
+                        <p class="text-xs text-stone-500 italic mt-1">Processo 100% natural</p>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800">TEXTURA</h4>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-amber-900/70">TEXTURA</h4>
                         <p class="text-xs text-stone-500 italic mt-1">Crocante por fora</p>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800">DIGESTÃO</h4>
+                        <h4 class="text-[10px] font-semibold uppercase tracking-widest text-amber-900/70">DIGESTÃO</h4>
                         <p class="text-xs text-stone-500 italic mt-1">Leve e saudável</p>
                     </div>
                 </div>
             </div>
 
-            <div class="md:w-1/2 w-full">
-                <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-200/50 bg-white">
-                    <img src="21376.jpg" alt="Pane & Tradizione - Quadro" class="w-full h-[380px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-700">
-                </div>
+            <!-- Imagem Colada na Borda Esquerda -->
+            <div class="w-full md:w-1/2 min-h-[350px] md:min-h-[550px] relative">
+                <img src="21376.jpg" 
+                     alt="Pane & Tradizione" 
+                     class="absolute inset-0 w-full h-full object-cover object-center">
             </div>
+
         </div>
     </section>
 
